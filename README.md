@@ -51,11 +51,7 @@ code is incompatible with Rosetta's TLS emulation on Apple Silicon. This is a kn
 the official dlang.org install script explicitly states that DMD does not support macOS aarch64/arm64.
 LDC is the correct compiler for Apple Silicon Macs.
 
-Open:
-
-```text
-https://github.com/ldc-developers/ldc/releases
-```
+Visit  https://github.com/ldc-developers/ldc/releases
 
 Download the current macOS ARM64 archive.
 
