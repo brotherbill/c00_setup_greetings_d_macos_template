@@ -6,13 +6,22 @@ Minimal D project with working macOS Apple Silicon build and F5 debug setup in V
 
 These are the shortest known-good steps to go from a mostly reset Mac mini to a working D setup for this repo.
 
-## 1. Install VS Code
+## 1. Software Update
+
+Update to latest version of Mac OS.
+
+## 2. Install VS Code
 
 Download and install VS Code for macOS.
 
 Open VS Code once so macOS finishes its first-run setup.
 
-## 2. Download LDC Instead of DMD
+## 3. Install XCode
+
+Use Apple Store to install XCode.
+Open XCode, then close it.
+
+## 4. Download LDC Instead of DMD
 
 DMD has no native arm64 macOS build. The x86_64 DMD binary (v2.112.0) was tried under Rosetta, but it
 hangs at startup in `rt.sections_darwin.getTLSRange` — the D runtime's Thread Local Storage detection
@@ -42,7 +51,7 @@ If macOS blocks `ldc2` or `dub` the first time you run them:
 2. Open `System Settings` -> `Privacy & Security`.
 3. Click `Open Anyway` for the blocked binary.
 
-## 3. Move the Toolchain to a Stable Folder
+## 5. Move the Toolchain to a Stable Folder
 
 Do not keep the compiler in Downloads.
 
@@ -50,6 +59,7 @@ Run:
 
 ```bash
 mkdir -p ~/tools
+
 mv ~/Downloads/ldc2-1.42.0-osx-arm64 ~/tools/
 ```
 
@@ -59,9 +69,9 @@ Final tool location:
 ~/tools/ldc2-1.42.0-osx-arm64
 ```
 
-## 4. Add LDC and DUB to PATH
+## 6. Add LDC and DUB to PATH
 
-Edit `~/.zprofile` so it contains:
+Create or Edit `~/.zprofile` so it contains: (*May use VS Code to create/edit file*)
 
 ```bash
 if [ -x /opt/homebrew/bin/brew ]; then
@@ -79,7 +89,7 @@ Open a new terminal, or run:
 source ~/.zprofile
 ```
 
-## 5. Verify the Toolchain
+## 7. Verify the Toolchain
 
 Run:
 
@@ -93,11 +103,11 @@ Expected result:
 - `ldc2` prints compiler version information
 - `dub` prints DUB version information
 
-## 6. Open This Repo in VS Code
+## 8. Open This Repo in VS Code
 
 Open the folder for this repo in VS Code.
 
-## 7. Set VS Code Theme to Dark
+## 9. Set VS Code Theme to Dark
 
 In VS Code:
 
@@ -110,7 +120,7 @@ If you prefer the Command Palette:
 2. Run `Preferences: Color Theme`
 3. Choose `Default Dark Modern`
 
-## 8. Install VS Code Extensions
+## 10. Install VS Code Extensions
 
 Install these extensions:
 
@@ -119,7 +129,7 @@ Install these extensions:
 
 If VS Code asks, allow the publisher and continue installation.
 
-## 9. Build the Project
+## 11. Build the Project
 
 This repo already includes the needed VS Code files:
 
@@ -132,7 +142,7 @@ Manual build command:
 dub build --build=debug --compiler=ldc2
 ```
 
-## 10. Debug with F5
+## 12. Debug with F5
 
 Open `source/app.d`, set a breakpoint, then press `F5`.
 
