@@ -1,0 +1,10 @@
+# D build artifacts
+/dub.selections.json
+/build/
+/bin/
+*.o
+*.obj
+*.exe
+
+# Compiled output binary (same name as project)
+/greetings_d

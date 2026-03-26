@@ -1,0 +1,8 @@
+{
+  "name": "greetings_d",
+  "description": "Minimal D project in greetings_d",
+  "authors": ["bb"],
+  "targetType": "executable",
+  "targetName": "greetings_d",
+  "sourceFiles": ["source/**"]
+}
