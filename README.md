@@ -11,7 +11,6 @@ Also serves as the setup repository for creating new D projects on macOS.
 | [install_serve_d_macos.md](install_serve_d_macos.md) | Install the D language server (serve-d) for autocomplete and IDE features in VS Code |
 | [setup_new_d_project_global.md](setup_new_d_project_global.md) | Install `new_d_project` globally so it can be called from any directory |
 | [new_d_project.md](new_d_project.md) | Create a new D project from the template |
-| [create_new_d_project_BEGINNER.md](create_new_d_project_BEGINNER.md) | Beginner-friendly walkthrough for creating a new D project |
 | [clean.md](clean.md) | Remove build artifacts from a D project |
 
 ## Quick Start
