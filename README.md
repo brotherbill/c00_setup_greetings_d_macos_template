@@ -241,6 +241,8 @@ cd ..
 pwd
 ```
 
+Close VS Code.
+
 ## 9. Set VS Code Theme (Course Standard)
 
 Course standard:
@@ -281,6 +283,8 @@ For each extension:
 
 If VS Code asks, allow the publisher and continue installation.
 
+Close VS Code.
+
 ## 11. Build the Project
 
 This repo already includes the needed VS Code files:
@@ -296,7 +300,7 @@ Run these in Terminal, one command at a time.
 cd ~/dev/d/c00_setup_greetings_d_macos
 ```
 
-(`~` is shorthand for your home folder — for example, `/Users/bb` on the instructor's setup.)
+(`~` is shorthand for your home folder — for example, `/Users/bb/` on the instructor's setup.)
 
 2. Confirm you are in the right folder:
 
@@ -312,9 +316,13 @@ Expected result: `/Users/<your-username>/dev/d/c00_setup_greetings_d_macos`
 dub build --build=debug --compiler=ldc2
 ```
 
+3. Close Terminal.
+
 ## 12. Debug with F5
 
-Open `source/app.d`, set a breakpoint, then press `F5`.
+1. Open VS Code
+2. Open Folder to `~/dev/d/c00_setup_greetings_d_macos`
+3. Open `source/app.d`, set a breakpoint, then press `F5`.
 
 If VS Code asks you to choose a debug configuration, select:
 
@@ -335,33 +343,6 @@ For this repo, the output is:
 
 ```text
 Greetings from D!
-```
-
-## Current Workspace Configuration
-
-Build task:
-
-```json
-{
-	"label": "dub: build debug",
-	"type": "shell",
-	"command": "dub",
-	"args": ["build", "--build=debug", "--compiler=ldc2"]
-}
-```
-
-Launch config:
-
-```json
-{
-	"name": "Debug greetings_d",
-	"type": "lldb",
-	"request": "launch",
-	"cwd": "${workspaceFolder}",
-	"program": "${workspaceFolder}/greetings_d",
-	"preLaunchTask": "dub: build debug",
-	"console": "integratedTerminal"
-}
 ```
 
 ## Troubleshooting
