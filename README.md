@@ -142,6 +142,7 @@ Run these in Terminal, one command at a time.
 
    ```bash
    /usr/bin/xattr -dr com.apple.quarantine "$HOME/tools/ldc2-1.42.0-osx-arm64/bin"
+   
    /bin/ln -sf "$HOME/tools/ldc2-1.42.0-osx-arm64/bin/ldc2" "$HOME/tools/ldc2-1.42.0-osx-arm64/bin/ldc"
    ```
 
@@ -155,7 +156,9 @@ Run these in Terminal, one command at a time.
 
    ```bash
    command -v ldc || which ldc
+   
    command -v dub || which dub
+   
    echo "$PATH" | tr ':' '\n'  # optional: inspect PATH entries
    ```
 
