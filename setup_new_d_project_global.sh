@@ -20,7 +20,7 @@ chmod +x "$DEST"
 # Create a wrapper script for easy calling
 cat > "$WRAPPER" << EOF
 #!/bin/bash
-"$DEST" "$@"
+"$DEST" "\$@"
 EOF
 chmod +x "$WRAPPER"
 
