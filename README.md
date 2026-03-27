@@ -247,7 +247,7 @@ cd ~/dev/d/c00_setup_greetings_d_macos
 pwd
 ```
 
-Expected result: `/Users/<your-user>/dev/d/c00_setup_greetings_d_macos`
+Expected result: `/Users/<your-username>/dev/d/c00_setup_greetings_d_macos`
 
 3. Build the project:
 
@@ -259,11 +259,13 @@ dub build --build=debug --compiler=ldc2
 
 Open `source/app.d`, set a breakpoint, then press `F5`.
 
-Choose:
+If VS Code asks you to choose a debug configuration, select:
 
 ```text
 Debug greetings_d
 ```
+
+On the first debug run on macOS, you may be prompted for your sudo password. This allows the debugger to attach to the process. Enter the password and continue.
 
 Expected result:
 
