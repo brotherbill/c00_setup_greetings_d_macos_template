@@ -362,3 +362,18 @@ Launch config:
 - If the build fails because the toolchain moved, restore it to `~/tools/ldc2-1.42.0-osx-arm64` or update `~/.zprofile`.
 - If debug runs but no output appears in the terminal pane, confirm `.vscode/launch.json` uses `"console": "integratedTerminal"`.
 - If you try the official DMD macOS package on Apple Silicon, it may crash with a segmentation fault. LDC is the working path documented here.
+
+## Quick Sanity Check (macOS)
+
+After setup, run this from the repo root:
+
+```bash
+./sanity_check_macos.sh
+```
+
+It verifies:
+
+- `dub` and `ldc2` are in `PATH`
+- debug build works with `ldc2`
+- `.vscode/tasks.json` uses `dub: build debug` with `ldc2`
+- `.vscode/launch.json` uses `lldb` with `preLaunchTask` set to `dub: build debug`
