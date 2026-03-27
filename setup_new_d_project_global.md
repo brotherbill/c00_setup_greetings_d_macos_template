@@ -17,7 +17,9 @@ Installs `new_d_project.sh` globally so you can create new D projects from any d
 
 ```bash
 cd /path/to/c00_setup_greetings_d_macos
+
 bash setup_new_d_project_global.sh
+
 source ~/.zprofile
 ```
 

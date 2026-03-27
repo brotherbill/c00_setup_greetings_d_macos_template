@@ -20,6 +20,8 @@ mkdir -p ~/tools/serve-d
 
 ### 2. Download the latest nightly ARM64 binary
 
+This is one line of code:
+
 ```bash
 curl -L -o ~/tools/serve-d/serve-d.tar.gz \
   https://github.com/Pure-D/serve-d/releases/download/nightly/serve-d_osx-nightly-arm64-20251231-3c1601.tar.gz
@@ -78,7 +80,9 @@ To update, download a newer nightly ARM64 asset and overwrite the existing binar
 ```bash
 curl -L -o ~/tools/serve-d/serve-d.tar.gz \
   https://github.com/Pure-D/serve-d/releases/download/nightly/<new-filename>.tar.gz
+  
 tar -xzf ~/tools/serve-d/serve-d.tar.gz -C ~/tools/serve-d/
+
 chmod +x ~/tools/serve-d/serve-d
 ```
 
