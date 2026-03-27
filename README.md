@@ -89,19 +89,35 @@ Final tool location:
 
 ## 6. Add LDC and DUB to PATH
 
-Create or Edit `~/.zprofile` so it contains: (*May use VS Code to create/edit file*)
+Run these in Terminal, one command at a time.
+
+1. Set home as your working directory:
 
 ```bash
+cd ~
+```
+
+2. Create `~/.zprofile` with the PATH setup:
+
+```bash
+cat > ~/.zprofile <<'EOF'
 if [ -x /opt/homebrew/bin/brew ]; then
-	eval "$(/opt/homebrew/bin/brew shellenv)"
+    eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 if [ -d "$HOME/tools/ldc2-1.42.0-osx-arm64/bin" ]; then
-	path=("$HOME/tools/ldc2-1.42.0-osx-arm64/bin" $path)
+    export PATH="$HOME/tools/ldc2-1.42.0-osx-arm64/bin:$PATH"
 fi
+EOF
 ```
 
-Open a new terminal, or run:
+3. Confirm the file contents:
+
+```bash
+sed -n '1,200p' ~/.zprofile
+```
+
+4. Open a new terminal, or run:
 
 ```bash
 source ~/.zprofile
@@ -109,34 +125,84 @@ source ~/.zprofile
 
 ## 7. Verify the Toolchain
 
-Run:
+Run these in Terminal, one command at a time.
+
+If any command prints `zsh: killed`, do this before retrying that same command:
+
+1. Click `Done` on the macOS dialog.
+2. Open `System Settings` -> `Privacy & Security`.
+3. Click `Open Anyway` for the blocked binary (`dub` or `ldc2`).
+4. Authenticate when prompted.
+5. Re-run only the command that was blocked.
 
 ```bash
-ldc2 --version
-dub --version
+dub --version | head -n 1
+```
+
+```bash
+ldc2 --version | head -n 1
+```
+
+```bash
+which dub
+```
+
+```bash
+which ldc2
 ```
 
 Expected result:
 
-- `ldc2` prints compiler version information
-- `dub` prints DUB version information
+- `dub --version` prints DUB version information
+- `ldc2 --version` prints compiler version information
+- `which dub` prints a path under `/Users/<your-user>/tools/ldc2-1.42.0-osx-arm64/bin/dub`
+- `which ldc2` prints a path under `/Users/<your-user>/tools/ldc2-1.42.0-osx-arm64/bin/ldc2`
+- You may need to approve `dub` and `ldc2` separately in `Privacy & Security`.
 
 ## 8. Open This Repo in VS Code
 
 Open the folder for this repo in VS Code.
 
-## 9. Set VS Code Theme to Dark
+Reference paths for this setup:
+
+- Parent folder: `/Users/bb/dev/d`
+- Repo folder: `/Users/bb/dev/d/c00_setup_greetings_d_macos`
+
+Optional terminal check (one command at a time):
+
+```bash
+cd /Users/bb/dev/d/c00_setup_greetings_d_macos
+```
+
+```bash
+pwd
+```
+
+```bash
+cd ..
+```
+
+```bash
+pwd
+```
+
+## 9. Set VS Code Theme (Course Standard)
+
+Course standard:
+
+- Use `Default High Contrast` (dark, high contrast).
 
 In VS Code:
 
 1. Open `Code` -> `Settings` -> `Theme` -> `Color Theme`
-2. Choose `Default Dark Modern`
+2. Choose `Default High Contrast`
 
-If you prefer the Command Palette:
+Light theme options for students who prefer light mode:
 
-1. Press `Cmd+Shift+P`
-2. Run `Preferences: Color Theme`
-3. Choose `Default Dark Modern`
+- `Default Light Modern`
+- `Default High Contrast Light`
+
+Students may use any color theme that is comfortable and readable for them.
 
 ## 10. Install VS Code Extensions
 
