@@ -21,3 +21,4 @@ For a fresh macOS Apple Silicon machine, follow the documents in this order:
 2. [install_serve_d_macos.md](install_serve_d_macos.md)
 3. [setup_new_d_project_global.md](setup_new_d_project_global.md)
 4. [new_d_project.md](new_d_project.md)
+5. [clean.md](clean.md)
