@@ -2,6 +2,10 @@
 
 Minimal D project with working macOS Apple Silicon build and F5 debug setup in VS Code.
 
+## Note on Keyboard Terminology
+
+This guide is written using a Windows keyboard. When you see references to the "Windows" key, it means the key in the same position as the Home/Apple (Command) key on a Mac keyboard. Substitute your Mac's Command key as needed.
+
 
 ## Express Route
 
@@ -170,18 +174,7 @@ Run these in Terminal, one command at a time.
 
    7. If changes don't persist in new terminal windows, restart your terminal or log out/in.
 
-   If you'd like, I can also:
-
-   - verify the file contents for you (you can paste `cat -n ~/.zprofile` output),
-   - or update `~/.zshrc` to source `~/.zprofile`.
-
-   Additional actions performed (record):
-
-   - These steps (removing quarantine and creating a short `ldc` symlink) were moved into Step 6 above so `ldc` is available before verification. If you prefer the explicit commands recorded here as well, I can restore them.
-
-   These actions were taken on Mar 27
-
-1. Close Terminal.
+1. Close Terminal and VS Code
 
 ## 7. Verify the Toolchain
 
@@ -219,6 +212,8 @@ Expected result:
 - `which ldc2` prints a path under `/Users/<your-user>/tools/ldc2-1.42.0-osx-arm64/bin/ldc2`
 - You may need to approve `dub` and `ldc2` separately in `Privacy & Security`.
 
+6. Close Terminal
+
 ## 8. Open This Repo in VS Code
 
 Open the folder for this repo in VS Code.
@@ -252,10 +247,11 @@ Course standard:
 
 - Use `Default High Contrast` (dark, high contrast).
 
-In VS Code:
+Open VS Code:
 
-1. Open `Code` -> `Settings` -> `Theme` -> `Color Theme`
+1. Select `Code` -> `Settings` -> `Theme` -> `Color Theme`
 2. Choose `Default High Contrast`
+3. Close VS Code
 
 Light theme options for students who prefer light mode:
 
@@ -266,10 +262,11 @@ Students may use any color theme that is comfortable and readable for them.
 
 ## 10. Install VS Code Extensions
 
-Open the Extensions view:
+1. Open VS Code
 
-- Click the Extensions icon in the left Activity Bar (looks like four squares), or
-- Press `Cmd+Shift+X`
+2. Open the Extensions view:
+
+- Click the Extensions icon in the left Activity Bar (looks like four squares), or press `Windows+Shift+X`
 
 Install these extensions one at a time:
 
