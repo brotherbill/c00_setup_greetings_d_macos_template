@@ -1,47 +1,3 @@
-## Project Creation and Cleanup Scripts (macOS/Linux)
-
-This template provides scripts for creating new D projects and cleaning up build artifacts. These scripts are now located in the project root.
-
-### 1. Make the setup script executable
-
-```bash
-chmod +x setup_new_d_project_global.sh
-```
-
-### 2. Run the setup script
-
-```bash
-./setup_new_d_project_global.sh
-
-source ~/.zprofile
-```
-
-This will copy the project creation script to your user scripts directory and add it to your PATH.
-
-### 3. Create a new project
-
-You can now create a new project from anywhere:
-
-```bash
-new_d_project <project_name> "<description>"
-```
-
-Example:
-
-```bash
-cd ~/dev/d
-new_d_project my_new_project "My new D project for macOS"
-```
-
-### 4. Clean up build artifacts
-
-To remove build folders and template executables, run:
-
-```bash
-./clean.sh
-```
-
----
 # greetings_d
 
 Minimal D project with working macOS Apple Silicon build and F5 debug setup in VS Code.
@@ -76,20 +32,29 @@ Open XCode, then close it.
 
 5. (Optional) Add VS Code to your PATH for command-line launching:
 
-	Open VS Code, press `Cmd+Shift+P`, type `Shell Command: Install 'code' command in PATH` and run it.
+  Open VS Code, press `Windows+Shift+P`, type `Shell Command: Install 'code' command in PATH` and run it.
 
 6. Open VS Code once so macOS finishes its first-run setup.
 
-7. Create `~/dev/d` and clone this repository:
+7. In Terminal, create `~/dev/d` and clone this repository:
 
-	```bash
-	mkdir -p ~/dev/d
-	cd ~/dev/d
-	git clone https://github.com/brotherbill/c00_setup_greetings_d_macos.git
-	cd c00_setup_greetings_d_macos
-	```
+  ```bash
+  mkdir -p ~/dev/d
+  
+  cd ~/dev/d
+  
+  git clone https://github.com/brotherbill/c00_setup_greetings_d_macos.git
+  
+  cd c00_setup_greetings_d_macos
+  ```
 
-	(*Trust the authors if prompted*)
+8. Close Terminal
+
+9. Open VS Code, open folder to ~/dev/d/c00_setup_greetings_d_macos
+
+   (*Trust the authors if prompted*)
+
+10. Close VS Code
 
 ## 4. Download LDC Instead of DMD
 
