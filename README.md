@@ -206,10 +206,21 @@ Students may use any color theme that is comfortable and readable for them.
 
 ## 10. Install VS Code Extensions
 
-Install these extensions:
+Open the Extensions view:
 
-1. `code-d` by `webfreak`
+- Click the Extensions icon in the left Activity Bar (looks like four squares), or
+- Press `Cmd+Shift+X`
+
+Install these extensions one at a time:
+
+1. `code-d` by `WebFreak`
 2. `CodeLLDB` by `Vadim Chugunov`
+
+For each extension:
+
+1. Type the name in the Extensions search box.
+2. Click the extension in the search results to open it in the center pane.
+3. Click the `Install` button in the center pane — do not use the Install button in the left search results list, as it is easy to accidentally install the wrong extension.
 
 If VS Code asks, allow the publisher and continue installation.
 
@@ -220,7 +231,25 @@ This repo already includes the needed VS Code files:
 - `.vscode/tasks.json`
 - `.vscode/launch.json`
 
-Manual build command:
+Run these in Terminal, one command at a time.
+
+1. Navigate to the repo folder:
+
+```bash
+cd ~/dev/d/c00_setup_greetings_d_macos
+```
+
+(`~` is shorthand for your home folder — for example, `/Users/bb` on the instructor's setup.)
+
+2. Confirm you are in the right folder:
+
+```bash
+pwd
+```
+
+Expected result: `/Users/<your-user>/dev/d/c00_setup_greetings_d_macos`
+
+3. Build the project:
 
 ```bash
 dub build --build=debug --compiler=ldc2
