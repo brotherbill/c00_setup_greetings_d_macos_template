@@ -1,3 +1,47 @@
+## Project Creation and Cleanup Scripts (macOS/Linux)
+
+This template provides scripts for creating new D projects and cleaning up build artifacts. These scripts are now located in the project root.
+
+### 1. Make the setup script executable
+
+```bash
+chmod +x setup_new_d_project_global.sh
+```
+
+### 2. Run the setup script
+
+```bash
+./setup_new_d_project_global.sh
+
+source ~/.bashrc
+```
+
+This will copy the project creation script to your user scripts directory and add it to your PATH.
+
+### 3. Create a new project
+
+You can now create a new project from anywhere:
+
+```bash
+new_d_project <project_name> "<description>"
+```
+
+Example:
+
+```bash
+cd ~/dev/d
+new_d_project my_new_project "My new D project for macOS"
+```
+
+### 4. Clean up build artifacts
+
+To remove build folders and template executables, run:
+
+```bash
+./clean.sh
+```
+
+---
 # greetings_d
 
 Minimal D project with working macOS Apple Silicon build and F5 debug setup in VS Code.
