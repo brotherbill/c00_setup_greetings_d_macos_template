@@ -114,6 +114,7 @@ Run these in Terminal, one command at a time.
 
    Summary (baby steps):
 
+   1. Open Terminal
    1. Set your home directory as working directory:
 
    ```bash
@@ -174,7 +175,7 @@ Run these in Terminal, one command at a time.
 
    7. If changes don't persist in new terminal windows, restart your terminal or log out/in.
 
-1. Close Terminal and VS Code
+1. Close Terminal and editor such as VS Code or Text Edit.
 
 ## 7. Verify the Toolchain
 
@@ -223,10 +224,10 @@ Reference paths for this setup:
 - Parent folder: `/Users/bb/dev/d`
 - Repo folder: `/Users/bb/dev/d/c00_setup_greetings_d_macos`
 
-Optional terminal check (one command at a time):
+Optional Terminal, check (one command at a time):
 
 ```bash
-cd /Users/bb/dev/d/c00_setup_greetings_d_macos
+cd ~/dev/d/c00_setup_greetings_d_macos/
 ```
 
 ```bash
@@ -241,7 +242,7 @@ cd ..
 pwd
 ```
 
-Close VS Code.
+Close Terminal.
 
 ## 9. Set VS Code Theme (Course Standard)
 
@@ -322,7 +323,7 @@ dub build --build=debug --compiler=ldc2
 
 1. Open VS Code
 2. Open Folder to `~/dev/d/c00_setup_greetings_d_macos`
-3. Open `source/app.d`, set a breakpoint, then press `F5`.
+3. Open `source/app.d`, set a breakpoint on line 5, then press `F5`.
 
 If VS Code asks you to choose a debug configuration, select:
 
@@ -367,3 +368,5 @@ It verifies:
 - debug build works with `ldc2`
 - `.vscode/tasks.json` uses `dub: build debug` with `ldc2`
 - `.vscode/launch.json` uses `lldb` with `preLaunchTask` set to `dub: build debug`
+
+Close VS Code
