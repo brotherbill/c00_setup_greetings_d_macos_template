@@ -3,7 +3,7 @@
 
 This guide covers moving a Camtasia project from Mac to Windows for advanced editing (including Audiate integration).
 
-## 0. Create Transfer Folder on Mac (Terminal Only)
+## 0. Create Transfer Folder on Mac
 1. In Terminal, run:
 	```bash
 	mkdir -p ~/Movies/camtasia_transfer/
@@ -15,7 +15,7 @@ This guide covers moving a Camtasia project from Mac to Windows for advanced edi
 
 ## 2. Capture Video (Detailed Steps)
 1. Open Camtasia
-2. Click **New Recording**
+2. Click **New Recording**, then click big red **rec** button
 3. Do your "Show and Tell"
 4. Ensure all windows to be recorded are on the right monitor
 5. Click **Rec** once or twice to end recording

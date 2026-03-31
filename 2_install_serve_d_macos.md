@@ -9,8 +9,6 @@ macOS binary. For Apple Silicon (arm64), use the nightly pre-built binary.
 ## Prerequisites
 
 - macOS Apple Silicon (arm64)
-- VS Code with the `code-d` extension installed
-- `~/tools` directory exists (used for developer tools such as ldc2)
 - Use Terminal for each of these steps
 
 ## Steps

@@ -16,13 +16,16 @@
 1. No pause/delete during record (unlike Windows)
 
 ## 2. Export Audio (.wav)
+1. Save with <kbd>Cmd</kbd> + S
+    1. Save As: 1_software_update.cmproj
+    1. Select folder: 1_software_update
+    1. Click: Save
 1. File > Export > Export Audio Only...
-1. Folder: 1_setup_d_environment_for_macos (or other)
-1. Name: 1_software_update_RAW.wav (or other)
-1. Format: .wav
+    1. Folder: 1_setup_d_environment_for_macos (or other)
+    1. Name: 1_software_update_RAW.wav (or other)
+    1. Format: .wav
 1. Click Export
 1. Click Reveal in Finder
-
 
 ## 3. Enhance Audio (Adobe)
 1. Visit: https://podcast.adobe.com/en/enhance
@@ -42,4 +45,20 @@
 1. Right-click on Video timeline, then right-click Silence Audio
 
 ## 5. Edit in Audiate
+1. Select Audio track, then click **Edit in Audiate**
+1. Select **Import as One Scene**, then click **Import**
+1. Display **Camtasia** in one window, and "Audiate" in other window.
+1. Remove Hesitations, Shorten Pauses...
+1. Correct Typos, remove repetitions
+1. Remove audio spikes
+1. Save with <kbd>Cmd</kbd> + S
+1. File > Export > **Export Captions...** (*English only*)
+    1. Save As: 1_software_update_en.srt
+
+## 6. Edit in Camtasia
+1. File > Import > Captions 
+    1. 1_software_update > 1_software_update_en.srt 
+    1. Click **Import** 
+
+## 7. Export Smart Video
 1. 

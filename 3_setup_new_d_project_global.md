@@ -1,4 +1,4 @@
-# setup_new_d_project_global.sh
+# 3_setup_new_d_project_global.md
 
 Installs `new_d_project.sh` globally so you can create new D projects from any directory.
 
